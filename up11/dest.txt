@@ -1,0 +1,5 @@
+asdf
+text
+to
+copy from
+source: text.txt

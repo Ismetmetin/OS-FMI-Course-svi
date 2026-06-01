@@ -1,0 +1,32 @@
+str=$1
+
+read decimal;
+
+#touch "$str"
+id -u > "$str"
+#cat /etc/passwd | grep "`whoami`" | cut -d":" -f3 > "$str"
+
+users >> "$str"
+
+if [ $(ls -1 *.txt| grep -c .txt) -ge $decimal ]
+then
+	
+	mkdir -p newdir
+
+	for file in *.txt
+	do 
+		size=$(wc -c < "$file")
+		echo "$file $size" >> "$str"
+		
+		cp "$file" "newdir/$file"
+		chmod 666 "newdir/$file"
+
+	done
+else 
+	echo bachka
+
+fi
+
+
+
+

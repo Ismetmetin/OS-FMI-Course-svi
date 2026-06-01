@@ -1,0 +1,8 @@
+1.txt
+checkSize.sh
+dirr
+gib.txt
+main.cpp
+string_search.sh
+text.txt
+userlog.sh

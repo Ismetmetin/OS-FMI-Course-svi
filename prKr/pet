@@ -1,0 +1,33 @@
+read dir decimal
+
+#ako ima dir/unames ako  lines <= decima then >>unames uid koito ne sa vutre i echo countAdded
+#else uid na useri koito ne sa v sesiq > outusers
+
+count=0
+
+if [ -e "$dir/unames" ] && [ $(wc -l < "$dir/unames") -le $decimal ]
+then
+	for uid in $@
+	do
+		if ! grep -qx "$uid" "$dir/unames" ; then
+
+			echo "$uid" >> "$dir/unames"
+			count=$(expr $count + 1)
+		fi
+	done
+
+	echo $count
+
+else
+	> outusers
+	for uid in $@
+	do
+		usrs=$(who)
+		if ! grep -q "$uid" "$usrs"; then
+			echo "$uid" >> "outusers"
+		fi
+
+	done
+fi
+
+	

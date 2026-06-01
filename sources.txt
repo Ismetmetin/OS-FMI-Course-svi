@@ -1,0 +1,5 @@
+kotki.out
+a.out
+krai.out
+mkotka.out
+oout.out

@@ -1,0 +1,7 @@
+name=$1
+file=$2
+
+
+lastRowFstWord=$(cat "$file" | tail -n1 | cut -d "1" -f1)
+
+echo `ls "/home/" | grep -c "$lastRowFstWord" | wc -l`
