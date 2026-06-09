@@ -1,0 +1,4 @@
+total 20
+-rwxrwxr-x 1 ismet ismet 16048 Jun  6 22:43 a.out
+-rw-rw-r-- 1 ismet ismet   474 Jun  6 22:43 cutt.c
+-rw-rw-r-- 1 ismet ismet     0 Jun  6 22:46 ls.txt
